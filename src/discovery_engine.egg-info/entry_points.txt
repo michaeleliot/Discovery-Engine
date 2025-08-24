@@ -1,0 +1,2 @@
+[console_scripts]
+discovery-engine = src.__main__:main

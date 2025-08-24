@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: discovery-engine
+Version: 0.1.0
+Summary: Add your description here
+Requires-Python: >=3.13
+Description-Content-Type: text/markdown
+Requires-Dist: genai>=2.1.0
+Requires-Dist: numpy>=1.24.4
+Requires-Dist: pydantic>=2.10.6
+
+# Discovery-Engine
