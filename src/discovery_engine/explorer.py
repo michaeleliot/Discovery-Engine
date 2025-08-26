@@ -2,7 +2,7 @@ import asyncio
 import time
 
 
-class Enabler:
+class Explorer:
     def __init__(self, database, prompt_sampler, llm, evaluator, iterations=20):
         self.database = database
         self.prompt_sampler = prompt_sampler
@@ -35,8 +35,7 @@ class Enabler:
             print(f"Iteration {i+1} took {iter_end - iter_start:.2f} seconds")
 
 
-        print("Final Categories: \n")
-        self.database.print_categories()
+        return self.database.best()
 
     async def explore_inspiration(self, parent_entry: dict, inspiration: dict, all_inspirations: list[dict]):
         parent_program = parent_entry["program"]

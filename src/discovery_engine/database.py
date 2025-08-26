@@ -133,7 +133,11 @@ class Database:
     def best(self):
         if not self.results:
             return None
-        return max(self.results, key=lambda r: (r["results"].get("score", 0), r["id"]))
+        best = max(self.results, key=lambda r: (r["results"].get("score", 0), r["id"]))
+        return {
+            "program": best["program"],
+            "base_prompt": best["base_prompt"]
+        }
 
     def mark_inspiration_as_used(self, inspiration: Any, result_id: int):
         """
